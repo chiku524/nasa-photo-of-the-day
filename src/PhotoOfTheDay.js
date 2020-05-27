@@ -1,8 +1,13 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
-function POTD({props}){
-    console.log(props);
+function POTD({props, date}){
     const [picture, setPicture] = useState(props);
+    
+    useEffect(() => {
+        setPicture(props.hdurl);
+    }, [props.hdurl]);
+
+    console.log(date);
     console.log(picture);
 
     if (!props.hdurl) return <h3>Loading...</h3>;
