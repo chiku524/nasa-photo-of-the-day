@@ -5,6 +5,7 @@ import NavBar from './NavBar';
 import POTD from './PhotoOfTheDay';
 import Title from './Title';
 import Explanation from './Explanation';
+import Btn from './Button';
 
 function App() {
   const [data, setData] = useState({hey: 'hey'});
@@ -37,7 +38,11 @@ function App() {
         app! Have fun <span role="img" aria-label='go!'>🚀</span>!
       </p> */}
       <Title title={title} date={date} />
-      <POTD props={data} date={date} />
+      <div className='PicAndButtonContainer'>
+        <Btn>Left</Btn>
+        <POTD props={data} date={date} />
+        <Btn>Right</Btn>
+      </div>
       <Explanation explanation={explanation} />
     </div>
   );

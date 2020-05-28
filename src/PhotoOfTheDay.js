@@ -1,4 +1,9 @@
 import React, {useState, useEffect} from 'react';
+import styled from 'styled-components';
+
+const PictureOfTheDay = styled.img`
+    max-width: 80%;
+`;
 
 function POTD({props, date}){
     const [picture, setPicture] = useState(props);
@@ -13,7 +18,7 @@ function POTD({props, date}){
     if (!props.hdurl) return <h3>Loading...</h3>;
     else return (
         <div className='POTD'>
-            <img src={picture} alt='IOTD'></img>
+            <PictureOfTheDay src={picture} alt='IOTD'></PictureOfTheDay>
         </div>
     );
 }
