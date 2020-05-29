@@ -36,18 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-.navBarContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 2%;
-}
-
-.navBarContainer a {
-  margin: 0px 50px;
-}
-
-.navBarContainer span {
-  margin: 0px 5%;
-}
